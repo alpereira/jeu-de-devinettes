@@ -28,18 +28,18 @@ function FindNb() {
 
         }
 
+        if (NbTries == 3) {
+
+                message.innerHTML = "Sorry, it's over. The correct number was : " + num +". Click on Restart to try again.";
+        
+        }
+        
         if (choice == num) {
 
                 message.style.color = "#00FF00"
                 
                 message.innerHTML ="Correct ! You have found in " + NbTries + " tries.";
 
-        }
-
-        if (NbTries == 3) {
-
-                message.innerHTML = "Sorry, it's over. The correct number was : " + num +". Click on Restart to try again.";
-        
         }
 
 }
