@@ -2,19 +2,26 @@ body {
         background-color: royalblue;
 }
 
-h1, h2 {
-        color: red;
-        background-color: white;
+section {
         display: flex;
-        justify-content: center;
-        width: auto;
+        flex-direction: column;
+        align-items: center;
+}
+
+h1, h2 {
+        color: purple;
+        background-color: white;
 }
 
 p {
-        color: yellow;
+        color: gold;
         display: flex;
         justify-content: center;
         font-size: larger;
+}
+
+#message {
+        color: red;
 }
 
 form {
