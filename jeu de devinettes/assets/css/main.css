@@ -1,17 +1,20 @@
 body {
-        background-color: black;
+        background-color: royalblue;
 }
 
 h1, h2 {
         color: red;
+        background-color: white;
         display: flex;
         justify-content: center;
+        width: auto;
 }
 
 p {
         color: yellow;
         display: flex;
         justify-content: center;
+        font-size: larger;
 }
 
 form {
