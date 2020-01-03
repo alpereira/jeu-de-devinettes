@@ -4,17 +4,15 @@
 4. Sinon il est déclaré perdant
 5. Il a la possibilité de toujours refaire une nouvelle partie*/
 
-console.log("Bienvenue dans ce jeu de devinette !");
-
 var num = Math.floor(Math.random() * 10) + 1;
 
 var NbEssais = 0;
 
 function Devine() {
 
-        var choisi = document.form1.devine1.value;
+        var choisi = document.form.guess.value;
 
-        var message = document.getElementById("message")
+        var message = document.getElementById("message");
 
         NbEssais++;
 
@@ -22,19 +20,19 @@ function Devine() {
 
         if (choisi < num) {
 
-                window.alert("Non, le nombre est plus grand.");
+                message.innerHTML = " No, the number is bigger. You have " + (3 - NbEssais) + " chances left";
 
         }
 
         if (choisi > num) {
 
-                window.alert("Non, le nombre est plus petit.");
+                message.innerHTML = " No, the number is smaller. You have " + (3 - NbEssais) + " chances left";
 
         }
 
         if (choisi == num) {
 
-                window.alert("Correct ! Vous avez trouvé en " + NbEssais + " essais.");
+                message.innerHTML = "Correct ! You have found in " + NbEssais + " tries.";
 
                 location.reload();
 
@@ -42,18 +40,10 @@ function Devine() {
 
         if (NbEssais == 3) {
 
-                window.alert("Désolé, c'est fini. Le nombre correct était : " + num);
+                message.innerHTML = "Sorry, it's over. The correct number was : " + num;
         
                 location.reload();
         
         }
 
-        message.innerHTML = "You have " + (3 - NbEssais) + " chances left" 
-
 }
-
-var restart = document.getElementById("restart");
-
-restart.addEventListener("click", function() {
-        location.reload
-})
