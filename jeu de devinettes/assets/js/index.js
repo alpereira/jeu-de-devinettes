@@ -6,44 +6,46 @@
 
 var num = Math.floor(Math.random() * 10) + 1;
 
-var NbEssais = 0;
+var NbTries = 0;
 
-function Devine() {
+function FindNb() {
 
-        var choisi = document.form.guess.value;
+        var choice = document.form.guess.value;
 
         var message = document.getElementById("message");
 
-        NbEssais++;
+        NbTries++;
 
-        status = "Nombre d'essais : " + NbEssais;
+        if (choice < num) {
 
-        if (choisi < num) {
-
-                message.innerHTML = " No, the number is bigger. You have " + (3 - NbEssais) + " chances left";
+                message.innerHTML = " Wrong, the number is bigger. You have " + (3 - NbTries) + " chances left";
 
         }
 
-        if (choisi > num) {
+        if (choice > num) {
 
-                message.innerHTML = " No, the number is smaller. You have " + (3 - NbEssais) + " chances left";
-
-        }
-
-        if (choisi == num) {
-
-                message.innerHTML = "Correct ! You have found in " + NbEssais + " tries.";
-
-                location.reload();
+                message.innerHTML = " Wrong, the number is smaller. You have " + (3 - NbTries) + " chances left";
 
         }
 
-        if (NbEssais == 3) {
+        if (choice == num) {
 
-                message.innerHTML = "Sorry, it's over. The correct number was : " + num;
-        
-                location.reload();
+                message.style.color = "#00FF00"
+                
+                message.innerHTML ="Correct ! You have found in " + NbTries + " tries.";
+
+        }
+
+        if (NbTries == 3) {
+
+                message.innerHTML = "Sorry, it's over. The correct number was : " + num +". Click on Restart to try again.";
         
         }
 
 }
+
+document.getElementById("restart").addEventListener("click", function() {
+
+        num =  Math.floor(Math.random() * 10) + 1;
+        
+});
