@@ -14,6 +14,8 @@ function Devine() {
 
         var choisi = document.form1.devine1.value;
 
+        var message = document.getElementById("message")
+
         NbEssais++;
 
         status = "Nombre d'essais : " + NbEssais;
@@ -50,5 +52,12 @@ function Devine() {
         
         }
 
+        message.innerHTML = "You have " + (3 - NbEssais) + " chances left" 
+
 }
 
+var restart = document.getElementById("restart");
+
+restart.addEventListener("click", function() {
+        location.reload
+})
