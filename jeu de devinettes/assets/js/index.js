@@ -21,12 +21,16 @@ function Devine() {
         if (choisi < num) {
 
                 window.alert("Non, le nombre est plus grand.");
+                
+                window.alert("C'est votre essai numéro " + (NbEssais + 1));
 
         }
 
         if (choisi > num) {
 
                 window.alert("Non, le nombre est plus petit.");
+                
+                window.alert("C'est votre essai numéro " + (NbEssais + 1));
 
         }
 
