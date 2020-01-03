@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
     <title>Jeu de devinettes</title>
+    
     <link href="assets\css\main.css" rel="stylesheet">
+    
     <script src="assets\js\index.js" type="text/javascript"></script>
+  
   </head>
+
   <body>
+
     <header></header>
+
     <main>
       
-      <h1>Guess the Number</h1>
+      <section>
+        
+        <h1>Guess the Number</h1>
 
-      <p>You must find a number between 1 and 10.<br>Be careful, you have only 3 opportunities.</p>
+        <p>You must find a number between 1 and 10.
+
+          <br>
+
+          Be careful, you have only 3 opportunities.
+        
+        </p>
       
-      <h2>Your choice :</h2> 
+        <h2>Your choice :</h2>
+      
+      </section>
       
       <form NAME="form">
 
-        <input TYPE="text" NAME="guess" SIZE="5">
-      
-        <input TYPE="BUTTON" VALUE="Submit" onclick="Devine();">
+        <div>
 
-        <input TYPE="BUTTON" NAME="restart" VALUE="Restart">
+          <input TYPE="text" NAME="guess" SIZE="5">
+      
+          <input TYPE="BUTTON" VALUE="Submit" onclick="FindNb();">
+
+        </div>
+
+        <button id="restart">Restart</button>
 
       </form>
 
       <p id="message"></p>
     
     </main>
+
     <footer></footer>
+
   </body>
+
 </html>
