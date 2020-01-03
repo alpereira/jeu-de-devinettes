@@ -24,15 +24,11 @@ function Devine() {
 
                 window.alert("Non, le nombre est plus grand.");
 
-                window.alert("C'est votre " + (NbEssais + 1) + "ème essai");
-
         }
 
         if (choisi > num) {
 
                 window.alert("Non, le nombre est plus petit.");
-
-                window.alert("C'est votre " + (NbEssais + 1) + "ème essai");
 
         }
 
